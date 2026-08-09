@@ -1,16 +1,47 @@
-# React + Vite
+# CampusKart Frontend 💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The frontend of CampusKart is a fast, responsive, and animated Single Page Application (SPA) built with React and Vite.
 
-Currently, two official plugins are available:
+## 🛠️ Core Technology Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** React (Vite)
+- **State Management:** Redux Toolkit
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Routing:** React Router DOM
+- **Authentication:** Clerk (`@clerk/clerk-react`)
+- **Real-Time:** Socket.io Client
+- **Forms & Validation:** React Hook Form
+- **Notifications:** React Hot Toast
+- **Icons:** Lucide React
 
-## React Compiler
+## 📜 Available Scripts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In the frontend directory, you can run:
 
-## Expanding the Oxlint configuration
+- `npm run dev`: Starts the Vite development server.
+- `npm run build`: Builds the app for production to the `dist` folder.
+- `npm run lint`: Runs the Oxlint linter to check for code quality.
+- `npm run preview`: Locally previews the production build.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🚀 Setup Instructions
+
+1. Ensure you have a `.env` file with the required environment variables:
+   ```env
+   VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   VITE_API_URL=http://localhost:5000/api/v1
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 🏗️ Structure Overview
+
+- `/src/components`: Reusable UI elements (Buttons, Inputs, Cards, etc.)
+- `/src/pages`: Major views of the application (Home, Profile, ProductDetails, etc.)
+- `/src/store`: Redux store configuration and state slices.

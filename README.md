@@ -29,6 +29,41 @@ CampusKart is a modern, real-time marketplace exclusively designed for college s
 
 ---
 
+## 🏛️ System Architecture
+
+CampusKart uses a modern Client-Server architecture:
+- **Frontend (Client):** A React single-page application (SPA) built with Vite, utilizing Redux for state management. It communicates with the backend via RESTful APIs and Socket.io for real-time events.
+- **Backend (API Server):** A Node.js/Express server that handles business logic, API requests, and real-time chat via WebSockets.
+- **Database:** MongoDB acts as the primary data store for users, products, and chat messages.
+- **Authentication:** Clerk manages user identity and authentication securely.
+- **Storage:** Cloudinary handles the storage and optimization of user-uploaded product images.
+
+## 📂 Repository Structure
+
+```text
+CampusKart/
+├── backend/                # Node.js & Express server
+│   ├── models/             # Mongoose database schemas
+│   ├── routes/             # API route definitions
+│   ├── controllers/        # Request handling logic
+│   ├── middleware/         # Custom Express middleware (auth, etc.)
+│   ├── server.js           # Application entry point
+│   └── package.json        # Backend dependencies and scripts
+├── frontend/               # React & Vite application
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Application routes/pages
+│   │   ├── store/          # Redux state slices
+│   │   ├── App.jsx         # Main React component
+│   │   └── main.jsx        # Entry point for React
+│   ├── index.html          # HTML template
+│   ├── vite.config.js      # Vite configuration
+│   └── package.json        # Frontend dependencies and scripts
+└── README.md               # Project overview and setup instructions
+```
+
+---
+
 ## 🚀 Local Development Setup
 
 To run this project locally on your machine, follow these steps:
