@@ -43,10 +43,3 @@ In the backend directory, you can run:
    npm run dev
    ```
 
-## 🏗️ Structure Overview
-
-- `/models`: Mongoose schemas defining the structure of database documents (User, Product, Message, etc.).
-- `/routes`: Express router definitions mapping endpoints to controller functions.
-- `/controllers`: Business logic for handling API requests.
-- `/middleware`: Custom middleware for authentication, error handling, etc.
-- `server.js`: The main entry point that initializes the Express app and Socket.io server.

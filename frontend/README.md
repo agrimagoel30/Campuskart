@@ -40,8 +40,4 @@ In the frontend directory, you can run:
    npm run dev
    ```
 
-## 🏗️ Structure Overview
 
-- `/src/components`: Reusable UI elements (Buttons, Inputs, Cards, etc.)
-- `/src/pages`: Major views of the application (Home, Profile, ProductDetails, etc.)
-- `/src/store`: Redux store configuration and state slices.
