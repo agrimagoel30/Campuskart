@@ -31,12 +31,20 @@ CampusKart is a modern, real-time marketplace exclusively designed for college s
 
 ## 🏛️ System Architecture
 
-CampusKart uses a modern Client-Server architecture:
-- **Frontend (Client):** A React single-page application (SPA) built with Vite, utilizing Redux for state management. It communicates with the backend via RESTful APIs and Socket.io for real-time events.
-- **Backend (API Server):** A Node.js/Express server that handles business logic, API requests, and real-time chat via WebSockets.
-- **Database:** MongoDB acts as the primary data store for users, products, and chat messages.
-- **Authentication:** Clerk manages user identity and authentication securely.
-- **Storage:** Cloudinary handles the storage and optimization of user-uploaded product images.
+The platform utilizes a decoupled client-server architecture. The frontend is built with React (Vite) and handles all user interactions and real-time updates. The backend is an Express server responsible for secure API routing, database transactions, and authentication validation.
+
+```mermaid
+graph TD
+    Client[React SPA Client Application]
+    Server[Express Node.js Server]
+    DB[(MongoDB Database)]
+    Auth[Clerk Authentication Provider]
+
+    Client -- REST API & WebSockets --> Server
+    Client -- Token Generation --> Auth
+    Server -- Mongoose Queries --> DB
+    Server -- Token Verification --> Auth
+```
 
 ## 📂 Repository Structure
 
@@ -146,5 +154,4 @@ This project is configured to be easily deployed to **Vercel** (Frontend) and **
 
 ---
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+**Note:** For detailed information regarding environment variables and specific configurations, please refer to the `README.md` files located in the `frontend` and `backend` directories respectively.
